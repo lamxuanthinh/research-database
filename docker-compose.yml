@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  postgres:
+    image: postgres:17
+    volumes:
+      - ./postgresql-data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: Secret@123
+      POSTGRES_DB: postgresql
+      PGDATA: /var/lib/postgresql/data
